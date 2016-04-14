@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blackbaud</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <link rel="stylesheet" href="css/all-build.css" />
+		<link rel="SHORTCUT ICON" href="images/FavIcon.ico" type="image/x-icon">
+		<script type="text/javascript">
+			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+				var msViewportStyle = document.createElement("style");
+				var mq = "@@-ms-viewport{width:auto!important}";
+				msViewportStyle.appendChild(document.createTextNode(mq));
+				document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+			}
+		</script>
+		<!-- Modernizr (browser feature detection library) & Respond.js (Enable responsive CSS code on browsers that don't support it, eg IE8) -->
+		<script src="lib/modernizr/modernizr-2.7.1-respond-1.4.2.min.js"></script>
+        <style>
+            html,body,div.mainpanel,div.leftpanel,div#applicationHost,#mainSection,#shellContainer {
+                height: 100% !important;
+            }
+            html {
+                background:#60AB41;
+            }
+            body {
+                background: none !important;
+            }
+            div.leftpanel {
+                background: #1d2939;
+            }
+			div.modal-backdrop {
+				-webkit-transform: translate3d(0, 0, 0);
+			}
+        </style>
+	</head>
+	<body class="stickyheader">
+		<div id="applicationHost"></div>
+		<script src="lib/require/require.js" data-main="app/main-built"></script>
+	</body>
+</html>

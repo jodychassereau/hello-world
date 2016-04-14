@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner</title>
+
+  
+  <link rel="stylesheet" type="text/css" href=".grunt/grunt-contrib-jasmine/jasmine.css">
+  
+
+  <script src=".grunt\grunt-contrib-jasmine/require.js"></script>
+  <script>
+    require.onError = function(error) {
+      var message = error.requireType + ': ';
+      if (error.requireType === 'scripterror' || error.requireType === 'notloaded' && error.requireModules) {
+        message += 'Illegal path or script error: ' + '[\'' + error.requireModules.join("', '") + '\']';
+      } else {
+        message += error.message;
+      }
+
+      throw Error(message);
+    };
+  </script>
+
+  
+  
+  <script src=".grunt/grunt-contrib-jasmine/jasmine.js"></script>
+  
+  <script src=".grunt/grunt-contrib-jasmine/jasmine-html.js"></script>
+  
+  
+
+  <script>
+    
+
+    
+      require.config({
+  "baseUrl": "app/",
+  "paths": {
+    "text": "../lib/require/text",
+    "durandal": "../lib/durandal/js",
+    "plugins": "../lib/durandal/js/plugins",
+    "transitions": "../lib/durandal/js/transitions",
+    "knockout": "../lib/knockout/knockout-3.4.0",
+    "bootstrap": "../lib/bootstrap/js/bootstrap",
+    "jquery": "../lib/jquery/jquery-1.9.1",
+    "snapjs": "../lib/snapjs/snap",
+    "chosen": "../lib/chosen.jquery.min",
+    "wizard": "../lib/bootstrap.wizard/bootstrap-wizard.min",
+    "sparkline": "../lib/sparkline/jquery.sparkline",
+    "pagination": "../lib/pagination/jquery.twbsPagination.min",
+    "iframe_transport": "../lib/fileupload/jquery.iframe-transport",
+    "pickadate": "../lib/picker/pickadate.min",
+    "kopickadate": "../lib/picker/knockout-pickadate.min",
+    "momentjs": "../lib/momentjs/moment.min",
+    "floatThead": "../lib/floatThead/jquery.floatThead.min",
+    "footable": "../lib/FooTable-2/js/footable",
+    "slide": "../lib/slider/jquery-ui.min",
+    "kovalid": "../lib/ko.validation/ko.validation",
+    "select2": "../lib/select2/select2.min"
+  }
+});
+    
+  </script>
+
+  <script>
+    function launchTest() {
+    require([
+      
+    ],
+    function(){
+      require(['.grunt/grunt-contrib-jasmine/reporter.js'], function(){
+        require(['.grunt/grunt-contrib-jasmine/jasmine-helper.js'], function(){
+          // good to go! Our tests should already be running.
+        })
+      })
+    }
+    )
+  }
+  </script>
+
+  
+  <script>
+  launchTest();
+  </script>
+  
+</head>
+<body>
+</body>
+</html>
